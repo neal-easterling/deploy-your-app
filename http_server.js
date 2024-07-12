@@ -49,6 +49,14 @@ app.post('/add', function (req, res) {
     res.send(db.get('users').value());
 });
 
+app.get('/accounts', (req, res)=>{
+    res.send("All accounts are current!");
+});
+
+app.post('/accounts', (req, res) =>{
+    res.send("You have posted a new account!");
+});
+
 // start server
 // -----------------------
 app.listen(port, function () {
